@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% block content %} 
+{% include 'navbar.html' %}
+
+<!-- Start of services page -->
+
+<div class="services-page container-fluid">
+  <div>
+    <h1 class="text-center heading">Services</h1>
+  </div>
+  <div class="services">
+    {% for i in response %}
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title fs-3 fw-semibold">{{i.title}}</h5>
+        <p class="card-text fs-6 fw-lighter">{{i.brief_Desc}}</p>
+        <a href="#" class="btn btn-lg">Learn more</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

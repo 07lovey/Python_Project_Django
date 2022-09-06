@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %} {% include 'navbar.html' %}
+<div class="food-care-page container-fluid">
+  <h1 class="text-center heading">Food Care</h1>
+  <div class="food-care-blogs"  >
+    {% for i in response %}
+    <div class="card text-center" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title fs-3 fw-semibold">{{i.card_title}}</h5>
+        <p class="card-text fs-6 fw-lighter">{{i.card_text}}</p>
+        <a href="{{i.card_link}}" class="btn btn-lg">Learn More</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{%endblock%}

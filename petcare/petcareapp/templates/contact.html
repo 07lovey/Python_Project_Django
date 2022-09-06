@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {% block content %} {% include 'navbar.html' %}
+<div class="contact-page">
+  <h1 class="text-center heading">Contact us</h1>
+
+  <div class="contact-details container">
+    <div class="social-contact">
+      <a href="https://www.facebook.com/"
+        ><i class="bi bi-facebook fs-3" style="color: #1877f2"></i
+      ></a>
+      <a href="https://web.whatsapp.com/"
+        ><i class="bi bi-whatsapp fs-3" style="color: #25d366"></i
+      ></a>
+      <a href="https://www.instagram.com/"
+        ><i class="bi bi-instagram fs-3" style="color: #e1306c"></i
+      ></a>
+      <a href="https://web.telegram.org/"
+        ><i class="bi bi-telegram fs-3" style="color: #0088cc"></i
+      ></a>
+    </div>
+    <div class="contact-form">
+      {% include 'messages.html' %}
+      <form class="form-control" method="post" action="#">
+        {% csrf_token %} {{ form.as_p }}
+        <h3 class="text-center">Feedback form</h3>
+
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter your first name"
+          name="firstname"
+        />
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          placeholder="Enter your Last name"
+          name="lastname"
+        />
+        <input
+          type="email"
+          class="form-control form-control-sm"
+          placeholder="Enter your email id"
+          name="emailid"
+        />
+        <input
+          type="tel"
+          class="form-control form-control-sm"
+          placeholder="Enter your Phone number"
+          name="phoneno"
+        />
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          placeholder="Enter your Address"
+          name="address"
+        />
+
+        <button type="submit" href="#" class="btn" id="submitbtn">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{%endblock%}

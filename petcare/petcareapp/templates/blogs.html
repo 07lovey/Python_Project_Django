@@ -1,0 +1,22 @@
+<!-- Start of Blog page -->
+{% extends 'base.html' %} {% block content %} {% include 'navbar.html' %}
+
+<div class="blogs-page container-fluid">
+  <div><h1 class="text-center heading">Blogs</h1></div>
+  <div class="blogs">
+    {% for i in response %}
+    <div class="card text-center" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title fs-3 fw-semibold">{{i.card_title}}</h5>
+        <p class="card-text fs-6 fs-lighter">{{i.card_text}}</p>
+        <a href="{{i.card_link}}" class="btn btn-lg">Learn More</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
+
+<!-- End of Blog page -->
+

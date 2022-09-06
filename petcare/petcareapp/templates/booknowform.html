@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="booking-page ">
+  {% include 'messages.html' %} 
+    <h1 class="text-center">Contact us</h1>
+    <div >
+      <div class="booking-details">
+        <div class="booking-form">
+          <form
+            class="form-control"
+            method="post"
+            action="#"
+          >
+          {% csrf_token %} {{ form.as_p }}
+            <h3 class="text-center">Feedback form</h3>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your first name"
+              name="firstname"
+             
+            />
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Enter your Last name"
+              name="lastname"
+             
+            />
+            <input
+              type="email"
+              class="form-control form-control-sm"
+              placeholder="Enter your email id"
+              name="emailid"
+             
+            />
+            <input
+              type="tel"
+              class="form-control form-control-sm"
+              placeholder="Enter your Phone number"
+              name="phoneno"
+             
+            />
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Enter your Address"
+              name="address"
+             
+            />
+  
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+            <a href ="/" class="btn btn-outline-primary">Go Back</a>
+          </form>
+        
+        </div>
+      </div>
+    </div>
+    </div>
+    
+</div>
+
+{% endblock %}
+
